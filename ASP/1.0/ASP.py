@@ -1,14 +1,4 @@
 #!/usr/bin/python3
-# -------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      ph5enwere-ezeh
-#
-# Created:     16/11/2016
-# Copyright:   (c) ph5enwere-ezeh 2016
-# Licence:     <your licence>
-# -------------------------------------------------------------------------------
 # STACK INTERPRETER
 import string
 import sys
