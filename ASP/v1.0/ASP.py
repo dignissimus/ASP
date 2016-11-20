@@ -252,10 +252,13 @@ def Floop():
     incode = ""
     for i in fcode:
         if i != "]":
-            incode += i
-            place += 1
+            if i not in["["]:
+                incode += i
+                place += 1
+            else:
+                place+=1
         else:
-            place += 1
+            place+=i
             break
     place += 1
     repeat = stack.pop()
@@ -278,13 +281,16 @@ def SFLoop():
     global code
     global place
     global formatchar
-    fcode = code[place + 2:]
+    fcode = code[place + 1:]
     print(fcode)
     incode = ""
     for i in fcode:
         if i != "]":
-            incode += i
-            place += 1
+            if i not in["["]:
+                incode += i
+                place += 1
+            else:
+                place+=i
         else:
             place += 1
             break
