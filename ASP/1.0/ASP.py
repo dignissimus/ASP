@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 # STACK INTERPRETER
 import string
 import sys
