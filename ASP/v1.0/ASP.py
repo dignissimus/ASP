@@ -17,7 +17,10 @@ import logging
 
 logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
-
+class CodeEception(Exception):
+    def __init__(self, err):
+        super(CodeEception, self).__init__("")
+        logging.error(err)
 class Block():
     def execute(self):
         global stack
@@ -86,15 +89,19 @@ def STR():
     internal = code[place + 1:]
     end = ""
     while not found:
-        if internal[inplace] != "\"":
-            end += str(internal[inplace])
+        try:
+            if internal[inplace] != "\"":
+                end += str(internal[inplace])
 
-        else:
-            stack.append(end)
-            found = True
-        inplace += 1
-        place += 1
-        # stack.append(str(place))
+            else:
+                stack.append(end)
+                found = True
+            inplace += 1
+            place += 1
+            # stack.append(str(place))
+        except IndexError:
+            raise CodeEception("Could not find final '\"'")
+
 
 
 def decompose(string):
@@ -233,7 +240,11 @@ def Wloop():
             place += 1
             break
     place += 1
-    while stack[-1]:
+    try:
+        testval = stack.pop()
+    except:
+        raise CodeEception("Could not find value to repeat by")
+    while testval:
         stack.append(incode)
         run()
     stack.pop()
@@ -261,7 +272,10 @@ def Floop():
             place+=i
             break
     place += 1
-    repeat = stack.pop()
+    try:
+        repeat = stack.pop()
+    except:
+        raise CodeEception("Could not find value to repeat by")
     if type(repeat) == Block:
         run()
     if type(repeat) == int:
@@ -295,7 +309,10 @@ def SFLoop():
             place += 1
             break
     place += 1
-    repeat = stack.pop()
+    try:
+        repeat = stack.pop()
+    except:
+        raise CodeEception("Could not find value to repeat by")
     if type(repeat) == Block:
         run()
     if type(repeat) == int:
@@ -404,14 +421,6 @@ def interpret(c):
             break
 
 
-if __name__ == "__main__":
-    if os.path.isfile(sys.argv[-1]) and sys.argv[-1] != __file__:
-        file = open(os.path.abspath(sys.argv[-1]))
-        code = file.read()
-        file.close()
-    else:
-        while True:
-            interpret(input("[Code] Input code:"))
 def finish():
     global stack
     # er=""
@@ -428,3 +437,17 @@ def finish():
 
 
         # print(stack)
+
+if __name__ == "__main__":
+    if os.path.isfile(sys.argv[-1]) and sys.argv[-1] != __file__:
+        file = open(os.path.abspath(sys.argv[-1]))
+        code = file.read()
+        file.close()
+    else:
+        while True:
+            try:
+                interpret(input("[Code] Input code:"))
+                finish()
+            except Exception as e:
+                print(e)
+                pass
