@@ -403,23 +403,22 @@ def interpret(c):
             print("nope: " + char + " pos: " + str(place))
             break
 
-            # print(er)
-
 
 if __name__ == "__main__":
     if os.path.isfile(sys.argv[-1]) and sys.argv[-1] != __file__:
         file = open(os.path.abspath(sys.argv[-1]))
         code = file.read()
         file.close()
-        interpret(code)
     else:
-        interpret(input("[Enter]Code: "))
-
+        while True:
+            interpret(input("[Code] Input code:"))
+def finish():
+    global stack
     # er=""
     # print(stack)
     for i in stack:  # IMPLICIT PRINTING!!!
         print(i)
-        """
+"""
         #er+=str(i)
         sys.stdout.write(str(i))
         sys.stdout.flush()
