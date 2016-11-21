@@ -1,3 +1,14 @@
+#-------------------------------------------------------------------------------
+# Name:        module1
+# Purpose:
+#
+# Author:      ph5enwere-ezeh
+#
+# Created:     21/11/2016
+# Copyright:   (c) ph5enwere-ezeh 2016
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+
 #!/usr/bin/python3
 
 # STACK INTERPRETER
@@ -237,11 +248,15 @@ def Wloop():
     global code
     global place
     fcode = code[place + 2:]
+    print(fcode)
     incode = ""
     for i in fcode:
         if i != "]":
-            incode += i
-            place += 1
+            if i not in ["["]:
+                incode += i
+                place += 1
+            else:
+                place+=1
         else:
             place += 1
             break
@@ -264,7 +279,7 @@ def Floop():
     global code
     global place
     global formatchar
-    fcode = code[place + 2:]
+    fcode = code[place + 1:]
     print(fcode)
     incode = ""
     for i in fcode:
@@ -273,9 +288,9 @@ def Floop():
                 incode += i
                 place += 1
             else:
-                place+=1
+                place+=i
         else:
-            place+=i
+            place += 1
             break
     place += 1
     try:
@@ -286,8 +301,6 @@ def Floop():
         run()
     if type(repeat) == int:
         for i in range(repeat):
-            # print(incode)
-            # print(incode.replace("%N", str(i)))
             stack.append(incode.replace(formatchar, str(i)))
             run()
     else:
