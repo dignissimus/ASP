@@ -1,14 +1,3 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      ph5enwere-ezeh
-#
-# Created:     21/11/2016
-# Copyright:   (c) ph5enwere-ezeh 2016
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-
 #!/usr/bin/python3
 
 # STACK INTERPRETER
@@ -31,7 +20,7 @@ class Block():
 
     def __init__(self, func):
         self.func = func
-        self.execute()
+        #self.execute()
         logging.debug("A BLOCK has been initialised with function" + func)
 
     def __str__(self):
@@ -247,8 +236,7 @@ def Wloop():
     global stack
     global code
     global place
-    fcode = code[place + 2:]
-    print(fcode)
+    fcode = code[place + 1:]
     incode = ""
     for i in fcode:
         if i != "]":
