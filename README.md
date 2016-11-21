@@ -70,3 +70,9 @@ which is for `$` in `<Value>` do `<code>`. If you use `f` it uses a 1 based inde
 `E` runs the string that was last place on the stack
 
 `b` reverses the item on the top of the stack
+
+`o` prints the stack without using newline. `O` does the same, but it also deletes the stack
+
+`;` deletes the last item on the stack
+
+`:` deletes the whole of the stack
