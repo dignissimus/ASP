@@ -91,7 +91,9 @@ def STR():
             place += 1
             # stack.append(str(place))
         except IndexError:
-            raise CodeEception("Could not find final '\"'")
+            #raise CodeEception("Could not find final '\"'")
+            stack.append(end)
+            break
 
 
 
@@ -364,7 +366,9 @@ def alphabet():
     global stack
     stack.append(string.ascii_lowercase)
 
-
+def reversetop():
+    global stack
+    stack.append(str(stack.pop())[::-1])
 keywords = {
     "+": addall,
     "\\": char,
@@ -389,7 +393,8 @@ keywords = {
     "f": SFLoop,
     "X": ten,
     "G": alphabet,
-    "D":divide}
+    "D":divide,
+    "b":reversetop}
 ignore = [" ", "-", "\n", "\t"]
 stack = []
 place = 0
