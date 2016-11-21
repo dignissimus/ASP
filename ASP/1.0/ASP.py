@@ -370,13 +370,26 @@ def reversetop():
     global stack
     stack.append(str(stack.pop())[::-1])
 
-def printnonewline():
+def printnonewlinedel():
     global stack
     er=""
     for i in stack:
         er+=str(i)+" "
     stack=[]
     print(er)
+
+def printnonewline():
+    global stack
+    er=""
+    for i in stack:
+        er+=str(i)+" "
+    print(er)
+def dellast():
+    global stack
+    stack.pop()
+def delall():
+    global stack
+    stack=[]
 keywords = {
     "+": addall,
     "\\": char,
@@ -403,7 +416,10 @@ keywords = {
     "G": alphabet,
     "D":divide,
     "b":reversetop,
-    "_":printnonewline}
+    "o":printnonewline,
+    "O":printnonewlinedel,
+    ";":dellast,
+    ":":delall,}
 
 ignore = [" ", "-", "\n", "\t"]
 stack = []
