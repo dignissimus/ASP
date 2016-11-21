@@ -434,6 +434,11 @@ def finish():
     # print(stack)
     for i in stack:  # IMPLICIT PRINTING!!!
         print(i)
+    global code
+    global place
+    code=""
+    stack=[]
+    place=0
 """
         #er+=str(i)
         sys.stdout.write(str(i))
