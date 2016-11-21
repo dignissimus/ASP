@@ -395,6 +395,7 @@ keywords = {
     "G": alphabet,
     "D":divide,
     "b":reversetop}
+
 ignore = [" ", "-", "\n", "\t"]
 stack = []
 place = 0
@@ -461,7 +462,11 @@ if __name__ == "__main__":
         file = open(os.path.abspath(sys.argv[-1]))
         code = file.read()
         file.close()
+        interpret(code)
     else:
+        if not os.path.isfile(sys.argv[-1]):
+            logging.error("'{}' Is not a file".format(sys.argv[-1]))
+            exit()
         while True:
             try:
                 interpret(input("[Code] Input code:"))
