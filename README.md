@@ -45,8 +45,8 @@ To add numbers you place them on the stack and use `A`, so `1 4A` takes off '1' 
 To subtract numbers you do the same as addition buy use `M`, and `1 4M` takes off the '1' and the '4' and replaces it with -1.
 To divide is `D` and to multiply is `T` and to raise x to the power of y ia `^`.
 ### loops
-For a while loop you would do `<Value>W<Code>]` which is while `<Value>` do `<code>`.
-For a For loop you would do `<Value><f/F><Code>]`. if you use `f` it uses a 1 based index so `7f$]` will print '1' to '7'. And `7F$]` will print '0' to '6'.
+For a while loop you would do `<Value>W<Code>]` which is while `<Value>` do `<code>`. `1W1p]` will forever print '1'
+For a For loop you would do `<Value><f/F><Code>]`. which is for `$` in `<Value>` do `<code>` if you use `f` it uses a 1 based index so `7f$]` will print '1' to '7'. And `7F$]` will print '0' to '6'.
 ### Other Functions
 `C` checks if all numbers on the stack are prime.
 `c` checks if the last number on the stack is prime.
