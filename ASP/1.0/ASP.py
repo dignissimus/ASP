@@ -369,6 +369,14 @@ def alphabet():
 def reversetop():
     global stack
     stack.append(str(stack.pop())[::-1])
+
+def printnonewline():
+    global stack
+    er=""
+    for i in stack:
+        er+=str(i)+" "
+    stack=[]
+    print(er)
 keywords = {
     "+": addall,
     "\\": char,
@@ -394,7 +402,8 @@ keywords = {
     "X": ten,
     "G": alphabet,
     "D":divide,
-    "b":reversetop}
+    "b":reversetop,
+    "_":printnonewline}
 
 ignore = [" ", "-", "\n", "\t"]
 stack = []
