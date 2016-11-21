@@ -53,6 +53,7 @@ For a For loop you would do `<Value><f/F><Code>]`. which is for `$` in `<Value>`
 `c` checks if the last number on the stack is prime.
 
 `R` reverses the whole stack
+
 `r` swaps the top two stack values
 
 `\` is used to add the next character onto the stack `\a` adds 'a' to the stack
