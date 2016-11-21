@@ -487,7 +487,12 @@ if __name__ == "__main__":
         file = open(os.path.abspath(sys.argv[-1]))
         code = file.read()
         file.close()
-        interpret(code)
+        try:
+            interpret(code)
+            finish()
+        except Exception as e:
+            print(e)
+            pass
     else:
         if not os.path.isfile(sys.argv[-1]):
             logging.error("'{}' Is not a file".format(sys.argv[-1]))
