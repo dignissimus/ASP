@@ -49,11 +49,18 @@ For a while loop you would do `<Value>W<Code>]` which is while `<Value>` do `<co
 For a For loop you would do `<Value><f/F><Code>]`. which is for `$` in `<Value>` do `<code>` if you use `f` it uses a 1 based index so `7f$]` will print '1' to '7'. And `7F$]` will print '0' to '6'.
 ### Other Functions
 `C` checks if all numbers on the stack are prime.
+
 `c` checks if the last number on the stack is prime.
+
 `R` reverses the whole stack
 `r` swaps the top two stack values
+
 `\` is used to add the next character onto the stack `\a` adds 'a' to the stack
+
 `X` adds '10' to the stack
+
 `G` adds the literal alphabet to the stack
+
 `{` AND `}` are used to define blocks which are defined 'functions' which sit on the stack.
+
 `E` runs the string that was last place on the stack
