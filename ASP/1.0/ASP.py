@@ -143,6 +143,13 @@ def times():
     stack.append(x * y)
 
 
+def divide():
+    global stack
+    x=stack.pop()
+    y=stack.pop()
+    stack.append(y/x)
+
+
 def minus():
     global stack
     x = stack.pop()
@@ -154,6 +161,13 @@ def minus():
 def reverseall():
     global stack
     stack = stack[::-1]
+
+def swap():
+    global stack
+    x=stack.pop()
+    y=stack.pop()
+    stack.append(x)
+    stack.append(y)
 
 
 def printstack():
@@ -361,6 +375,7 @@ keywords = {
     "T": times,
     "M": minus,
     "R": reverseall,
+    "":swap,
     "/": printstack,
     "\'": addchars,
     "c": isprime,
@@ -372,7 +387,8 @@ keywords = {
     "F": Floop,
     "f": SFLoop,
     "X": ten,
-    "G": alphabet}
+    "G": alphabet,
+    "D":divide}
 ignore = [" ", "-", "\n", "\t"]
 stack = []
 place = 0
