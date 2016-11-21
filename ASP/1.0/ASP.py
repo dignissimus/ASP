@@ -268,7 +268,6 @@ def Floop():
     global place
     global formatchar
     fcode = code[place + 1:]
-    print(fcode)
     incode = ""
     for i in fcode:
         if i != "]":
