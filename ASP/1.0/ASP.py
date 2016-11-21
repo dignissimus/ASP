@@ -228,6 +228,7 @@ def isprime():
 
 def isallprime():
     global stack
+    stack=[]
     stack.append(all([numisprime(i) for i in stack]))
 
 
