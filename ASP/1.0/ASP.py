@@ -375,7 +375,7 @@ keywords = {
     "T": times,
     "M": minus,
     "R": reverseall,
-    "":swap,
+    "r":swap,
     "/": printstack,
     "\'": addchars,
     "c": isprime,
