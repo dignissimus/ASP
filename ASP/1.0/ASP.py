@@ -372,7 +372,6 @@ def reversetop():
 def printnonewlinedel():
     global stack
     er=""
-    print("Stack: "+str(stack))
     for i in stack:
         #er+=str(i)+" "
         print(str(i), end=" ")
