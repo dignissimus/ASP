@@ -43,7 +43,7 @@ If you want to print these values out then you would need to use either `P`, `p`
 ### Arithmatic
 To add numbers you place them on the stack and use `A`, so `1 4A` takes off '1' and '4' from the stack and replaces it with 5.
 To subtract numbers you do the same as addition but you would use `M`, and `1 4M` takes off the '1' and the '4' and replaces it with -1.
-To divide is `D` and to multiply is `T` and to raise x to the power of y ia `^`.
+To divide is `D` and to multiply is `T` and to raise x to the power of y is `^`.
 ### loops
 For a while loop you would do `<Value>W<Code>]` which is while `<Value>` do `<code>`.
 `1W1p]` will forever print '1'
