@@ -15,8 +15,10 @@ class CodeEception(Exception):
 class Block():
     def execute(self):
         global stack
+        if self in stack:
+            del stack[stack.index(self)]
         run()
-        return stack.pop()
+        return ""
 
     def __init__(self, func):
         self.func = func
@@ -376,6 +378,7 @@ def printnonewlinedel():
         #er+=str(i)+" "
         print(str(i), end=" ")
     stack=[]
+    print()
     #print(er)
 
 def printnonewline():
