@@ -34,7 +34,7 @@ Just
 ```
 ./ASP.py
 ```
-For an interactive
+For an interactive interface
 
 ## Programming
 ### Basics
