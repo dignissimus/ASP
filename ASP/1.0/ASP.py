@@ -279,11 +279,10 @@ def Floop():
                 incode += i
                 place += 1
             else:
-                place+=i
+                place+=1
         else:
             place += 1
             break
-    place += 1
     try:
         repeat = stack.pop()
     except:
@@ -313,11 +312,10 @@ def SFLoop():
                 incode += i
                 place += 1
             else:
-                place+=i
+                place+=1
         else:
             place += 1
             break
-    place += 1
     try:
         repeat = stack.pop()
     except:
@@ -374,6 +372,7 @@ def reversetop():
 def printnonewlinedel():
     global stack
     er=""
+    print("Stack: "+str(stack))
     for i in stack:
         #er+=str(i)+" "
         print(str(i), end=" ")
