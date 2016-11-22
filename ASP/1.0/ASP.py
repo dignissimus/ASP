@@ -304,7 +304,6 @@ def SFLoop():
     global place
     global formatchar
     fcode = code[place + 1:]
-    print(fcode)
     incode = ""
     for i in fcode:
         if i != "]":
@@ -324,7 +323,7 @@ def SFLoop():
     if type(repeat) == Block:
         run()
     if type(repeat) == int:
-        for i in range(repeat+1):
+        for i in range(1, repeat+1):
             # print(incode)
             # print(incode.replace("%N", str(i)))
             stack.append(incode.replace(formatchar, str(i)))
@@ -374,9 +373,10 @@ def printnonewlinedel():
     global stack
     er=""
     for i in stack:
-        er+=str(i)+" "
+        #er+=str(i)+" "
+        print(str(i), end=" ")
     stack=[]
-    print(er)
+    #print(er)
 
 def printnonewline():
     global stack
