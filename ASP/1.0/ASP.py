@@ -456,7 +456,7 @@ def interpret(c):
             place += 1
             continue
         else:
-            print("nope: " + char + " pos: " + str(place))
+            print("nope: " + char + " pos: " + str(place+1))
             break
 
 
