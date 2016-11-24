@@ -454,7 +454,7 @@ place = 0
 processing = False
 processer = None
 code = ""
-intext=options.input
+intext=""
 def interpret(c):
     global code
     global place
@@ -515,7 +515,8 @@ if __name__ == "__main__":
             code = file.read()
             file.close()
             try:
-                runinput(options.input)
+                if options.input!=None:
+                    runinput(options.input)
                 interpret(code)
                 finish()
                 exit()
