@@ -34,7 +34,7 @@ Just
 ```
 ./ASP.py
 ```
-and for input which will be run as code you can use
+and for input which will be evaluated as code you can use
 ```
 ./ASP.py /path/to/code.asprj -i <PUT INPUT HERE>
 ```
