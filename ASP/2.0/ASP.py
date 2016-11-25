@@ -123,7 +123,7 @@ def decompose(string):
                 end.append(i)
             else:
                 end.append(i)
-    end += num
+    end.append(str(num))
     return end
 
 
@@ -417,6 +417,31 @@ def dellast():
 def delall():
     global stack
     stack=[]
+
+def lentop():
+    global stack
+    obj=stack.pop()
+    try:
+        length=len(obj)
+    except:
+        length=len(str(obj))
+    stack.append(length)
+def lenall():
+    global stack
+    stack.append(len(stack))
+
+def jointop():
+    global stack
+    x=stack.pop()
+    y = stack.pop()
+    stack.append(str(y)+ str(x))
+def joinall():
+    global stack
+    instack=stack
+    end=""
+    for i in instack:
+        end+=str(i)
+    stack=[end]
 keywords = {
     "+": addall,
     "\\": char,
@@ -446,8 +471,11 @@ keywords = {
     "o":printnonewline,
     "O":printnonewlinedel,
     ";":dellast,
-    ":":delall,}
-
+    ":":delall,
+    "l":lentop,
+    "L":lenall,
+    "j":jointop,
+    "J":joinall}
 ignore = [" ", "-", "\n", "\t"]
 stack = []
 place = 0
