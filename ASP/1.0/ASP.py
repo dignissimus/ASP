@@ -115,7 +115,7 @@ def decompose(string):
                 end.append(i)
             else:
                 end.append(i)
-    end += num
+    end.append(num)
     return end
 
 
