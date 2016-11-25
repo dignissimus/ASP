@@ -476,7 +476,7 @@ keywords = {
     "L":lenall,
     "j":jointop,
     "J":joinall}
-ignore = [" ", "-", "\n", "\t"]
+ignore = [" ", "-", "\n", "\t", ""]
 stack = []
 place = 0
 processing = False
@@ -492,6 +492,7 @@ def interpret(c):
     # print(code)
     while True:  # code not finished
         # print("[PLACE]"+str(place))
+
         if place >= len(code):
             break
         char = code[place]
