@@ -1,4 +1,4 @@
-# ASProject
+# ASP
 
 A "simple" Stack-oriented programming language
 
@@ -16,7 +16,7 @@ First download the version wanted
 
 ####Downloading
 ```
-wget https://raw.githubusercontent.com/spammy23/ASProject/master/ASP/<VERSION>/ASP.py
+wget https://raw.githubusercontent.com/spammy23/ASP/master/ASP/<VERSION>/ASP.py
 ```
 
 ####Setting up
@@ -26,9 +26,9 @@ sudo chmod +x ./ASP.py
 ```
 ### Running
 ```
-./ASP.py /path/to/code.asprj
+./ASP.py /path/to/code.asp
 ```
-To run the code in `code.asprj`
+To run the code in `code.asp`
 OR
 Just
 ```
@@ -36,15 +36,15 @@ Just
 ```
 and for input which will be evaluated as code you can use
 ```
-./ASP.py /path/to/code.asprj -i <PUT INPUT HERE>
+./ASP.py /path/to/code.asp -i <PUT INPUT HERE>
 ```
 
 For an interactive interface
 
 ## Programming
 ### Basics
-ASProj is stack-oriented so the code `1` would add '1' to the stack and `1 2` would add '1' to the stack then add '2'.
-If you want to print these values out then you would need to use either `P`, `p` or `/`. `P` prints the whole stack, then deletes it. `p` takes off the last added stack entry, then prints it, so `1 2 3p` will print '3'(then print '1' and '2' because ASProj prints the stack afterwards). `/` prints the whole stack, but leaves it as it is.
+ASP is stack-oriented so the code `1` would add '1' to the stack and `1 2` would add '1' to the stack then add '2'.
+If you want to print these values out then you would need to use either `P`, `p` or `/`. `P` prints the whole stack, then deletes it. `p` takes off the last added stack entry, then prints it, so `1 2 3p` will print '3'(then print '1' and '2' because ASP prints the stack afterwards). `/` prints the whole stack, but leaves it as it is.
 ### Arithmatic
 To add numbers you place them on the stack and use `A`, so `1 4A` takes off '1' and '4' from the stack and replaces it with 5.
 To subtract numbers you do the same as addition but you would use `M`, and `1 4M` takes off the '1' and the '4' and replaces it with -1.
