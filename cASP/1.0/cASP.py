@@ -6,7 +6,7 @@ import sys
 import os
 import logging
 from optparse import OptionParser
-parser=OptionParser(usage="Usage: %prog [options] args", version="ASProject 2.0")
+parser=OptionParser(usage="Usage: %prog [options] args", version="cASProject 1.0")
 parser = OptionParser(usage="usage: %prog [options] filename",
                           version="%prog 1.0")
 parser.add_option("-i", "--input",
