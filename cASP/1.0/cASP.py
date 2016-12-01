@@ -434,6 +434,7 @@ def jointop():
     x=stack.pop()
     y = stack.pop()
     stack.append(str(y)+ str(x))
+
 def joinall():
     global stack
     instack=stack
@@ -441,6 +442,41 @@ def joinall():
     for i in instack:
         end+=str(i)
     stack=[end]
+
+def convertint():
+    global stack
+    stack.append(int(stack.pop()))
+
+def convertstr():
+    global stack
+    stack.append(str(stack.pop()))
+
+def convertintall():
+    global stack
+    for i in range(len(stack)):
+        stack[i]=int(stack[i])
+
+def convertstrall():
+    global stack
+    for i in range(len(stack)):
+        stack[i]=str(stack[i])
+
+def convertchar():
+    stack.append(ord(str(stack.pop())))
+
+def convertcharall():
+    global stack
+    for i in range(len(stack)):
+        stack[i]=ord(str(stack[i]))
+
+def bascii():
+    stack.append(chr(int(stack.pop())))
+
+def basciiall():
+    global stack
+    for i in range(len(stack)):
+        stack[i]=chr(int(stack[i]))
+
 keywords = {
     "+": addall,
     "\\": char,
@@ -474,7 +510,15 @@ keywords = {
     "l":lentop,
     "L":lenall,
     "j":jointop,
-    "J":joinall}
+    "J":joinall,
+    "i":convertint,
+    "s":convertstr,
+    "I":convertintall,
+    "S":convertstrall,
+    "u":convertchar,
+    "U":convertcharall,
+    "h":bascii,
+    "H":basciiall}
 ignore = [" ", "-", "\n", "\t", ""]
 stack = []
 place = 0
