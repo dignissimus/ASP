@@ -6,7 +6,7 @@ A "simple" Stack-oriented programming language
 
 ALl you need is a working version of python3
 
-####Linux
+#### Linux
 ```
 sudo apt-get install python3
 ```
@@ -14,13 +14,13 @@ sudo apt-get install python3
 ### Installing
 First download the version wanted
 
-####Downloading
+#### Downloading
 ```
 wget https://raw.githubusercontent.com/spammy23/ASP/master/ASP/<VERSION>/ASP.py
 ```
 
-####Setting up
-#####Linux
+#### Setting up
+##### Linux
 ```
 sudo chmod +x ./ASP.py
 ```
