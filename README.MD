@@ -4,7 +4,7 @@ A "simple" Stack-oriented programming language
 
 ### Prerequisites
 
-ALl you need is a working version of python3
+All you need is a working version of python3
 
 #### Linux
 ```
